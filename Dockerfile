@@ -13,5 +13,6 @@ FROM golang:alpine
 WORKDIR /app
 
 COPY --from=build-stage /go/src/github.com/iAziz786/jiffy/main.out /app/main.out
+COPY --from=build-stage /go/src/github.com/iAziz786/jiffy/index.html /app/index.html
 
 ENTRYPOINT ./main.out
